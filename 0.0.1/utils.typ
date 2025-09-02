@@ -31,3 +31,13 @@
     )
     date
 }
+
+#let currentdate() = {
+    let date = datetime.today()
+    let month = monthname(date.month() - 1)
+    let day = date.day()
+    let year = date.year()
+    align(right)[
+        #month #day, #year
+    ]
+}
